@@ -4,4 +4,4 @@ $:.unshift(lib_dir) unless
   $:.include?(lib_dir) || $:.include?(File.expand_path(lib_dir))
 
 require 'virgin_stats'
-VirginStats::Scraper.run
+pp VirginStats::Scraper.run
