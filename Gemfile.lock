@@ -12,6 +12,7 @@ GEM
     ruby-debug-base (0.10.3)
       linecache (>= 0.3)
     string_to_editor (0.0.2)
+    term-ansicolor (1.0.5)
 
 PLATFORMS
   ruby
@@ -22,3 +23,4 @@ DEPENDENCIES
   nokogiri
   ruby-debug
   string_to_editor
+  term-ansicolor
