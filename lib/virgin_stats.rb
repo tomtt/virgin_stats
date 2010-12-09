@@ -1,4 +1,5 @@
 require "virgin_stats/scraper"
+require "virgin_stats/query_generator"
 require "virgin_stats/display_table"
 
 if Gem.available?("ruby-debug")
