@@ -18,3 +18,5 @@ data[:timestamp] = now.to_s
 File.open(File.join(VirginStats.data_dir, now.strftime("virgin signal %Y-%m-%d %H:%M:%S.txt")), "w") do |f|
   f.puts data.inspect
 end
+
+VirginStats::DisplayTable.display
