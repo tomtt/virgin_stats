@@ -14,7 +14,7 @@ FileUtils.mkdir_p(VirginStats.data_dir)
 data = VirginStats::Scraper.run
 now = Time.now
 data[:timestamp] = now.to_s
-
+data[:comment] = ARGV.join(" ")
 File.open(File.join(VirginStats.data_dir, now.strftime("virgin signal %Y-%m-%d %H:%M:%S.txt")), "w") do |f|
   f.puts data.inspect
 end
