@@ -26,11 +26,16 @@ module VirginStats
           log("Network status changed to: %s" % (current_net_status_online ? "online" : "OFFline"))
           @last_network_status_online = current_net_status_online
         else
-          if @loop_count % 100 == 0
+          if @loop_count % 1000 == 0
             log("Monitoring in progress (%d pings performed)" % @loop_count)
           end
         end
       end
+    end
+
+    def stop
+      log("Stopped monitoring")
+      exit(0)
     end
 
     def formatted_current_time

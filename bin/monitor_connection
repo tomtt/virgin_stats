@@ -7,4 +7,6 @@ $:.unshift(lib_dir) unless
 require 'virgin_stats'
 require "virgin_stats/network_monitor"
 
-VirginStats::NetworkMonitor.new.start
+monitor = VirginStats::NetworkMonitor.new
+trap "SIGINT", proc { monitor.stop }
+monitor.start
